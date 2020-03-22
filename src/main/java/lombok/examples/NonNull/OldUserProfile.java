@@ -1,4 +1,6 @@
-package lombok.examples.ValueClass;
+package lombok.examples.NonNull;
+
+import java.util.Objects;
 
 public class OldUserProfile {
 	private final String firstName;
@@ -7,10 +9,10 @@ public class OldUserProfile {
 	private final String mobilePhone;
 
 	public OldUserProfile(String firstName, String lastName, String homePhone, String mobilePhone) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.homePhone = homePhone;
-		this.mobilePhone = mobilePhone;
+		this.firstName = Objects.requireNonNull(firstName);
+		this.lastName = Objects.requireNonNull(lastName);
+		this.homePhone = Objects.requireNonNull(homePhone);
+		this.mobilePhone = Objects.requireNonNull(mobilePhone);
 	}
 
 	public String getFirstName() {

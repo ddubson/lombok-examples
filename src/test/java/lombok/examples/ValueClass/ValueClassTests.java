@@ -8,12 +8,18 @@ public class ValueClassTests {
 	@Test
 	public void withoutLombok_createsImmutableDataClassAndHasAToString() {
 		OldUserProfile oldUserProfile = new OldUserProfile("James", "Doe", "111-111-1111", "222-222-2222");
-		assertEquals("OldUserProfile{firstName='James', lastName='Doe', homePhone='111-111-1111', mobilePhone='222-222-2222'}", oldUserProfile.toString());
+		assertEquals("James", oldUserProfile.getFirstName());
+		assertEquals("Doe", oldUserProfile.getLastName());
+		assertEquals("111-111-1111", oldUserProfile.getHomePhone());
+		assertEquals("222-222-2222", oldUserProfile.getMobilePhone());
 	}
 
 	@Test
 	public void withLombok_createsImmutableDataClassAndHasAToString() {
 		NewUserProfile newUserProfile = new NewUserProfile("James", "Doe", "111-111-1111", "222-222-2222");
-		assertEquals("NewUserProfile(firstName=James, lastName=Doe, homePhone=111-111-1111, mobilePhone=222-222-2222", newUserProfile.toString());
+		assertEquals("James", newUserProfile.getFirstName());
+		assertEquals("Doe", newUserProfile.getLastName());
+		assertEquals("111-111-1111", newUserProfile.getHomePhone());
+		assertEquals("222-222-2222", newUserProfile.getMobilePhone());
 	}
 }

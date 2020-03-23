@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class EqualsHashcodeTests {
-  static class Person {
+  private static class Person {
     public Person(String name, int age) {
       this.name = name;
       this.age = age;

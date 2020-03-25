@@ -9,3 +9,4 @@
 - `@NonNull` - require class attributes to be non-null values
 - `@Slf4j` (Logging) - simplify adding a static logger
 - `With` - safe duplication of an existing data class
+- `val` - type inference examples
